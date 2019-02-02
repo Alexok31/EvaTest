@@ -22,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f80-fc-1cS">
                         <rect key="frame" x="0.0" y="0.0" width="140" height="209"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageProductId1" translatesAutoresizingMaskIntoConstraints="NO" id="Yc3-bd-cDz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yc3-bd-cDz">
                                 <rect key="frame" x="9.5" y="8" width="121" height="121"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Yc3-bd-cDz" secondAttribute="height" id="Ere-a5-xfD"/>
@@ -84,7 +84,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="imageProductId1" width="563" height="502"/>
         <image name="scanIcon" width="256" height="256"/>
     </resources>
 </document>

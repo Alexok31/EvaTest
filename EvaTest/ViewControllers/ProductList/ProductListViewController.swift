@@ -13,6 +13,7 @@ class ProductListViewController: UIViewController {
     @IBOutlet var productListCollection: UICollectionView!
     
     var scrollOn = true
+    var loading = true
     var seceltCell : Int?
     
     let cellId = R.reuseIdentifier.productListCellId.identifier

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		42149BF222060DC90004D81C /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42149BF122060DC90004D81C /* NotificationHelper.swift */; };
 		42149BF422060ECB0004D81C /* AnimationServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42149BF322060ECB0004D81C /* AnimationServise.swift */; };
+		42460BF92206474E00B99AB9 /* GifInitialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42460BF82206474E00B99AB9 /* GifInitialization.swift */; };
+		42460BFB2206481300B99AB9 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 42460BFA2206481300B99AB9 /* loading.gif */; };
 		426591BF220437A700FD397B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426591BE220437A700FD397B /* AppDelegate.swift */; };
 		426591C1220437A700FD397B /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426591C0220437A700FD397B /* ProductListViewController.swift */; };
 		426591C4220437A700FD397B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426591C2220437A700FD397B /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 		3C2CFCEE04B1A3BD0EC26B59 /* Pods_EvaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EvaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42149BF122060DC90004D81C /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		42149BF322060ECB0004D81C /* AnimationServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationServise.swift; sourceTree = "<group>"; };
+		42460BF82206474E00B99AB9 /* GifInitialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifInitialization.swift; sourceTree = "<group>"; };
+		42460BFA2206481300B99AB9 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		426591BB220437A700FD397B /* EvaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EvaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		426591BE220437A700FD397B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		426591C0220437A700FD397B /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 				426591CA220437A800FD397B /* LaunchScreen.storyboard */,
 				426591CD220437A800FD397B /* Info.plist */,
 				4297A19D22046269007A3D4C /* GoogleService-Info.plist */,
+				42460BFA2206481300B99AB9 /* loading.gif */,
 				426591C5220437A700FD397B /* EvaTest.xcdatamodeld */,
 			);
 			path = Resources;
@@ -160,6 +165,7 @@
 			children = (
 				4297A19F22046638007A3D4C /* Color.swift */,
 				42149BF122060DC90004D81C /* NotificationHelper.swift */,
+				42460BF82206474E00B99AB9 /* GifInitialization.swift */,
 				42149BF322060ECB0004D81C /* AnimationServise.swift */,
 			);
 			path = Common;
@@ -312,6 +318,7 @@
 				426591CC220437A800FD397B /* LaunchScreen.storyboard in Resources */,
 				426591C9220437A800FD397B /* Assets.xcassets in Resources */,
 				4297A19E22046269007A3D4C /* GoogleService-Info.plist in Resources */,
+				42460BFB2206481300B99AB9 /* loading.gif in Resources */,
 				426591C4220437A700FD397B /* Main.storyboard in Resources */,
 				426591D722043A3500FD397B /* ProductCollectionCell.xib in Resources */,
 			);
@@ -396,6 +403,7 @@
 				4297A1AE2204A54F007A3D4C /* DownloadCachedImage.swift in Sources */,
 				42F47DC4220612F1008B5C38 /* ProductListHelper.swift in Sources */,
 				426591DB22043A9E00FD397B /* PersistentManager.swift in Sources */,
+				42460BF92206474E00B99AB9 /* GifInitialization.swift in Sources */,
 				426591E02204437D00FD397B /* R.generated.swift in Sources */,
 				4297A1B4220500A6007A3D4C /* ProductStructure.swift in Sources */,
 			);

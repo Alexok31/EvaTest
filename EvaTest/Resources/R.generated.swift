@@ -21,14 +21,22 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 1 files.
+  /// This `R.file` struct is generated, and contains static references to 2 files.
   struct file {
     /// Resource file `GoogleService-Info.plist`.
     static let googleServiceInfoPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "GoogleService-Info", pathExtension: "plist")
+    /// Resource file `loading.gif`.
+    static let loadingGif = Rswift.FileResource(bundle: R.hostingBundle, name: "loading", pathExtension: "gif")
     
     /// `bundle.url(forResource: "GoogleService-Info", withExtension: "plist")`
     static func googleServiceInfoPlist(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.googleServiceInfoPlist
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "loading", withExtension: "gif")`
+    static func loadingGif(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.loadingGif
       return fileResource.bundle.url(forResource: fileResource)
     }
     
@@ -40,7 +48,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 7 images.
+  /// This `R.image` struct is generated, and contains static references to 8 images.
   struct image {
     /// Image `cancel`.
     static let cancel = Rswift.ImageResource(bundle: R.hostingBundle, name: "cancel")
@@ -52,6 +60,8 @@ struct R: Rswift.Validatable {
     static let imageProductId1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "imageProductId1")
     /// Image `launchScreenLogo`.
     static let launchScreenLogo = Rswift.ImageResource(bundle: R.hostingBundle, name: "launchScreenLogo")
+    /// Image `loading.gif`.
+    static let loadingGif = Rswift.ImageResource(bundle: R.hostingBundle, name: "loading.gif")
     /// Image `navigationBar`.
     static let navigationBar = Rswift.ImageResource(bundle: R.hostingBundle, name: "navigationBar")
     /// Image `scanIcon`.
@@ -80,6 +90,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "launchScreenLogo", bundle: ..., traitCollection: ...)`
     static func launchScreenLogo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.launchScreenLogo, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "loading.gif", bundle: ..., traitCollection: ...)`
+    static func loadingGif(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.loadingGif, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "navigationBar", bundle: ..., traitCollection: ...)`
@@ -182,7 +197,6 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
-        if UIKit.UIImage(named: "imageProductId1", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'imageProductId1' is used in nib 'ProductCollectionCell', but couldn't be loaded.") }
         if UIKit.UIImage(named: "scanIcon", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'scanIcon' is used in nib 'ProductCollectionCell', but couldn't be loaded.") }
       }
       

@@ -9,6 +9,7 @@
 import UIKit
 
 let imageCache = NSCache<AnyObject, AnyObject>()
+var loading = true
 
 extension UIImageView {
     func downloadImeg (from url: String) {
@@ -25,15 +26,17 @@ extension UIImageView {
         let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             if error == nil {
                 DispatchQueue.main.async {
+                    self.image = nil
                     if let downloadedImage = UIImage(data: data!) {
                         imageCache.setObject(downloadedImage, forKey: url as AnyObject)
                         self.image = UIImage (data: data!)
+                        
                     }
-                    
                 }
             }
             
         }
+
         task.resume()
         
     }

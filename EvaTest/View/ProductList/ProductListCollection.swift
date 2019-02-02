@@ -20,8 +20,11 @@ extension ProductListViewController: UICollectionViewDelegate, UICollectionViewD
         cell.layer.cornerRadius = 5
         cell.delegate = self
         cell.codeLabel.text = productsData[indexPath.row].productCode
-        if let urlStr = productsData[indexPath.row].imageUrl {
-                cell.productImage.downloadImeg(from: urlStr)
+        if cell.productImage.image == nil {
+             cell.productImage.loadGif(name: "loading")
+        }
+        if let urlStr = self.productsData[indexPath.row].imageUrl {
+            cell.productImage.downloadImeg(from: urlStr)
         }
         if seceltCell != nil && indexPath.row == seceltCell{
             AnimationServise().highlightLabelAnimating(label: cell.codeLabel)
