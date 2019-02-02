@@ -23,6 +23,9 @@ extension ProductListViewController: UICollectionViewDelegate, UICollectionViewD
         if let urlStr = productsData[indexPath.row].imageUrl {
                 cell.productImage.downloadImeg(from: urlStr)
         }
+        if seceltCell != nil && indexPath.row == seceltCell{
+            AnimationServise().highlightLabelAnimating(label: cell.codeLabel)
+        }
         return cell
     }
     
@@ -31,12 +34,9 @@ extension ProductListViewController: UICollectionViewDelegate, UICollectionViewD
         if scrollOn {
             guard let row = self.seceltCell else {return}
             let indexToScrollTo = IndexPath(item: row, section: 0)
-            self.productListCollection.scrollToItem(at: indexToScrollTo, at: .top, animated: false)
+            self.productListCollection.scrollToItem(at: indexToScrollTo, at: .centeredVertically, animated: false)
             scrollOn = false
         }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

@@ -40,7 +40,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 6 images.
+  /// This `R.image` struct is generated, and contains static references to 7 images.
   struct image {
     /// Image `cancel`.
     static let cancel = Rswift.ImageResource(bundle: R.hostingBundle, name: "cancel")
@@ -50,6 +50,8 @@ struct R: Rswift.Validatable {
     static let evaLogo = Rswift.ImageResource(bundle: R.hostingBundle, name: "evaLogo")
     /// Image `imageProductId1`.
     static let imageProductId1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "imageProductId1")
+    /// Image `launchScreenLogo`.
+    static let launchScreenLogo = Rswift.ImageResource(bundle: R.hostingBundle, name: "launchScreenLogo")
     /// Image `navigationBar`.
     static let navigationBar = Rswift.ImageResource(bundle: R.hostingBundle, name: "navigationBar")
     /// Image `scanIcon`.
@@ -73,6 +75,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "imageProductId1", bundle: ..., traitCollection: ...)`
     static func imageProductId1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.imageProductId1, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "launchScreenLogo", bundle: ..., traitCollection: ...)`
+    static func launchScreenLogo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.launchScreenLogo, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "navigationBar", bundle: ..., traitCollection: ...)`
@@ -188,13 +195,18 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       try main.validate()
+      try launchScreen.validate()
     }
     
-    struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType {
+    struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = UIKit.UIViewController
       
       let bundle = R.hostingBundle
       let name = "LaunchScreen"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "launchScreenLogo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'launchScreenLogo' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
+      }
       
       fileprivate init() {}
     }

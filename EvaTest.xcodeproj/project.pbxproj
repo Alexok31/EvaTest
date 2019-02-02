@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42149BF222060DC90004D81C /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42149BF122060DC90004D81C /* NotificationHelper.swift */; };
+		42149BF422060ECB0004D81C /* AnimationServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42149BF322060ECB0004D81C /* AnimationServise.swift */; };
 		426591BF220437A700FD397B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426591BE220437A700FD397B /* AppDelegate.swift */; };
 		426591C1220437A700FD397B /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426591C0220437A700FD397B /* ProductListViewController.swift */; };
 		426591C4220437A700FD397B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426591C2220437A700FD397B /* Main.storyboard */; };
@@ -25,11 +27,14 @@
 		4297A1AC22047DC9007A3D4C /* ProductListCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4297A1AB22047DC9007A3D4C /* ProductListCollection.swift */; };
 		4297A1AE2204A54F007A3D4C /* DownloadCachedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4297A1AD2204A54F007A3D4C /* DownloadCachedImage.swift */; };
 		4297A1B4220500A6007A3D4C /* ProductStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4297A1B3220500A6007A3D4C /* ProductStructure.swift */; };
+		42F47DC4220612F1008B5C38 /* ProductListHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F47DC3220612F1008B5C38 /* ProductListHelper.swift */; };
 		9656B099AEC022B3FA0866FB /* Pods_EvaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2CFCEE04B1A3BD0EC26B59 /* Pods_EvaTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C2CFCEE04B1A3BD0EC26B59 /* Pods_EvaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EvaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42149BF122060DC90004D81C /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
+		42149BF322060ECB0004D81C /* AnimationServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationServise.swift; sourceTree = "<group>"; };
 		426591BB220437A700FD397B /* EvaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EvaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		426591BE220437A700FD397B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		426591C0220437A700FD397B /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +55,7 @@
 		4297A1AB22047DC9007A3D4C /* ProductListCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCollection.swift; sourceTree = "<group>"; };
 		4297A1AD2204A54F007A3D4C /* DownloadCachedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCachedImage.swift; sourceTree = "<group>"; };
 		4297A1B3220500A6007A3D4C /* ProductStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductStructure.swift; sourceTree = "<group>"; };
+		42F47DC3220612F1008B5C38 /* ProductListHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListHelper.swift; sourceTree = "<group>"; };
 		B741708F32843FD3BE716B54 /* Pods-EvaTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EvaTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-EvaTest/Pods-EvaTest.release.xcconfig"; sourceTree = "<group>"; };
 		F0F65AFD293BB2346E293DDF /* Pods-EvaTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EvaTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EvaTest/Pods-EvaTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,9 +98,10 @@
 				426591D822043A3C00FD397B /* View */,
 				426591DC22043B6A00FD397B /* Model */,
 				4297A1A422046F0D007A3D4C /* Servise */,
+				42F47DC622061393008B5C38 /* Helper */,
 				426591DE2204433A00FD397B /* Resources */,
 				4297A1A122046643007A3D4C /* Common */,
-				426591C2220437A700FD397B /* Main.storyboard */,
+				42F47DC522061360008B5C38 /* Storyboards */,
 			);
 			path = EvaTest;
 			sourceTree = "<group>";
@@ -102,8 +109,8 @@
 		426591D3220439FF00FD397B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				426591C0220437A700FD397B /* ProductListViewController.swift */,
-				426591E12204481B00FD397B /* ScannerViewController.swift */,
+				42EF794B2205F4DD00BD62BF /* ProductList */,
+				42EF794C2205F4EB00BD62BF /* Scanner */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -129,8 +136,8 @@
 		426591DC22043B6A00FD397B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4297A1B922050364007A3D4C /* CoreData */,
 				4297A1B3220500A6007A3D4C /* ProductStructure.swift */,
+				4297A1B922050364007A3D4C /* CoreData */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -152,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				4297A19F22046638007A3D4C /* Color.swift */,
+				42149BF122060DC90004D81C /* NotificationHelper.swift */,
+				42149BF322060ECB0004D81C /* AnimationServise.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -188,6 +197,38 @@
 				426591DA22043A9E00FD397B /* PersistentManager.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		42EF794B2205F4DD00BD62BF /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				426591C0220437A700FD397B /* ProductListViewController.swift */,
+			);
+			path = ProductList;
+			sourceTree = "<group>";
+		};
+		42EF794C2205F4EB00BD62BF /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				426591E12204481B00FD397B /* ScannerViewController.swift */,
+			);
+			path = Scanner;
+			sourceTree = "<group>";
+		};
+		42F47DC522061360008B5C38 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				426591C2220437A700FD397B /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		42F47DC622061393008B5C38 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				42F47DC3220612F1008B5C38 /* ProductListHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		5086043187A954BDA558BEFF /* Frameworks */ = {
@@ -343,14 +384,17 @@
 			files = (
 				4297A1AC22047DC9007A3D4C /* ProductListCollection.swift in Sources */,
 				426591C1220437A700FD397B /* ProductListViewController.swift in Sources */,
+				42149BF422060ECB0004D81C /* AnimationServise.swift in Sources */,
 				426591E22204481B00FD397B /* ScannerViewController.swift in Sources */,
 				4297A1A722047245007A3D4C /* GetData.swift in Sources */,
 				426591BF220437A700FD397B /* AppDelegate.swift in Sources */,
 				4297A1A322046F03007A3D4C /* FirebaseHelper.swift in Sources */,
+				42149BF222060DC90004D81C /* NotificationHelper.swift in Sources */,
 				426591C7220437A700FD397B /* EvaTest.xcdatamodeld in Sources */,
 				426591D622043A3500FD397B /* ProductCollectionCell.swift in Sources */,
 				4297A1A022046638007A3D4C /* Color.swift in Sources */,
 				4297A1AE2204A54F007A3D4C /* DownloadCachedImage.swift in Sources */,
+				42F47DC4220612F1008B5C38 /* ProductListHelper.swift in Sources */,
 				426591DB22043A9E00FD397B /* PersistentManager.swift in Sources */,
 				426591E02204437D00FD397B /* R.generated.swift in Sources */,
 				4297A1B4220500A6007A3D4C /* ProductStructure.swift in Sources */,

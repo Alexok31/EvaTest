@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VOI-6G-3hD">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController storyboardIdentifier="ProductListViewControllerId" id="BYZ-38-t0r" customClass="ProductListViewController" customModule="EvaTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lns-0b-mWB">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <color key="backgroundColor" red="0.94117647058823528" green="0.54509803921568623" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="5" id="oZk-TY-oRl">
                                     <size key="itemSize" width="50" height="50"/>
@@ -37,8 +37,8 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Lns-0b-mWB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2uO-8n-iAA"/>
-                            <constraint firstItem="Lns-0b-mWB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="At3-bP-gsk"/>
                             <constraint firstItem="Lns-0b-mWB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QBI-2i-HYP"/>
+                            <constraint firstAttribute="bottom" secondItem="Lns-0b-mWB" secondAttribute="bottom" id="Snl-7l-Ts1"/>
                             <constraint firstItem="Lns-0b-mWB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zek-LX-yG2"/>
                             <constraint firstItem="Lns-0b-mWB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zpb-ys-ana"/>
                         </constraints>
@@ -59,11 +59,11 @@
             <objects>
                 <viewController storyboardIdentifier="ScannerVcId" id="K9Z-Ov-N3X" customClass="ScannerViewController" customModule="EvaTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lw3-IH-2xq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUq-AB-Wa8">
-                                <rect key="frame" x="25" y="45" width="25" height="25"/>
+                                <rect key="frame" x="25" y="69" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Y7H-dD-F6C"/>
                                     <constraint firstAttribute="width" constant="25" id="pxb-KR-liH"/>
@@ -74,7 +74,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Наведите камеру на QR код или штрих-код" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="rKQ-bN-2cw">
-                                <rect key="frame" x="28" y="90" width="319" height="18"/>
+                                <rect key="frame" x="28" y="114" width="319" height="18"/>
                                 <color key="backgroundColor" red="1" green="0.62352941179999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="KJX-u4-JFq"/>
@@ -88,14 +88,20 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CodeNumber" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70p-2f-dl5">
-                                <rect key="frame" x="37.5" y="606.5" width="300" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CodeNumber" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="70p-2f-dl5">
+                                <rect key="frame" x="37.666666666666657" y="714" width="300" height="24"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.5450980392" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wWO-K2-DeD">
-                                <rect key="frame" x="37.5" y="193.5" width="300" height="300"/>
+                                <rect key="frame" x="37.666666666666657" y="261" width="300" height="300"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="codeFrame" translatesAutoresizingMaskIntoConstraints="NO" id="XXp-gp-9PE">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
@@ -149,7 +155,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VOI-6G-3hD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mfy-Na-A4o">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

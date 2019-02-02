@@ -24,11 +24,11 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     override func viewDidLoad() {
         super.viewDidLoad()
         setCaptureСodeSession()
+        lbCodeInfo.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         if (captureSession?.isRunning == false) {
             captureSession.startRunning()
         }
@@ -36,17 +36,20 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         if (captureSession?.isRunning == true) {
             captureSession.stopRunning()
         }
     }
     
+    
+    //Mark -  setup scanner
+    
     func setCaptureСodeSession() {
         captureSession = AVCaptureSession()
-        guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
+        let metadataOutput = AVCaptureMetadataOutput()
         let videoInput: AVCaptureDeviceInput
-        
+        guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
+
         do {
             videoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
         } catch {
@@ -55,19 +58,12 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
         if (captureSession.canAddInput(videoInput)) {
             captureSession.addInput(videoInput)
-        } else {
-            failedMessage()
-            return
         }
         
-        let metadataOutput = AVCaptureMetadataOutput()
         if (captureSession.canAddOutput(metadataOutput)) {
             captureSession.addOutput(metadataOutput)
             metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             metadataOutput.metadataObjectTypes = [.ean8, .ean13, .pdf417, .qr]
-        } else {
-            failedMessage()
-            return
         }
         
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
@@ -75,17 +71,13 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         previewLayer.videoGravity = .resizeAspectFill
         view.layer.addSublayer(previewLayer)
         captureSession.startRunning()
+        
         view.bringSubviewToFront(scanInfo)
         view.bringSubviewToFront(cancelButton)
         view.bringSubviewToFront(captureFrameView)
+        view.bringSubviewToFront(lbCodeInfo)
     }
     
-    func failedMessage() {
-        let ac = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default))
-        present(ac, animated: true)
-        captureSession = nil
-    }
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         captureSession.stopRunning()
@@ -96,20 +88,25 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             foundCode(code: stringValue)
         }
-        DispatchQueue.main.async {
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadProductsInfo"), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: NotificationMane.reloadProductsInfo), object: nil)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.dismiss(animated: true, completion: nil)
         }
+       
     }
     
+    // Mark - scanned code initialization
     func foundCode(code: String) {
+        lbCodeInfo.isHidden = false
+        lbCodeInfo.text = code
         guard let id = productId else {return}
         FirebaseHelper().handleSendProductCode(productId: id, code: code)
     }
     
+    
     @IBAction func dismissScannerView(_ sender: Any) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: NotificationMane.reloadProductsInfo), object: nil)
         dismiss(animated: true, completion: nil)
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadProductsInfo"), object: nil)
     }
     
     
