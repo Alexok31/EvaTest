@@ -8,22 +8,50 @@
 
 /* Begin PBXBuildFile section */
 		426591BF220437A700FD397B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426591BE220437A700FD397B /* AppDelegate.swift */; };
-		426591C1220437A700FD397B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426591C0220437A700FD397B /* ViewController.swift */; };
+		426591C1220437A700FD397B /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426591C0220437A700FD397B /* ProductListViewController.swift */; };
 		426591C4220437A700FD397B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426591C2220437A700FD397B /* Main.storyboard */; };
 		426591C7220437A700FD397B /* EvaTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 426591C5220437A700FD397B /* EvaTest.xcdatamodeld */; };
 		426591C9220437A800FD397B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 426591C8220437A800FD397B /* Assets.xcassets */; };
 		426591CC220437A800FD397B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426591CA220437A800FD397B /* LaunchScreen.storyboard */; };
+		426591D622043A3500FD397B /* ProductCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426591D422043A3500FD397B /* ProductCollectionCell.swift */; };
+		426591D722043A3500FD397B /* ProductCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 426591D522043A3500FD397B /* ProductCollectionCell.xib */; };
+		426591DB22043A9E00FD397B /* PersistentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426591DA22043A9E00FD397B /* PersistentManager.swift */; };
+		426591E02204437D00FD397B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426591DF2204437D00FD397B /* R.generated.swift */; };
+		426591E22204481B00FD397B /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426591E12204481B00FD397B /* ScannerViewController.swift */; };
+		4297A19E22046269007A3D4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4297A19D22046269007A3D4C /* GoogleService-Info.plist */; };
+		4297A1A022046638007A3D4C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4297A19F22046638007A3D4C /* Color.swift */; };
+		4297A1A322046F03007A3D4C /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4297A1A222046F03007A3D4C /* FirebaseHelper.swift */; };
+		4297A1A722047245007A3D4C /* GetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4297A1A622047245007A3D4C /* GetData.swift */; };
+		4297A1AC22047DC9007A3D4C /* ProductListCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4297A1AB22047DC9007A3D4C /* ProductListCollection.swift */; };
+		4297A1AE2204A54F007A3D4C /* DownloadCachedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4297A1AD2204A54F007A3D4C /* DownloadCachedImage.swift */; };
+		4297A1B4220500A6007A3D4C /* ProductStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4297A1B3220500A6007A3D4C /* ProductStructure.swift */; };
+		9656B099AEC022B3FA0866FB /* Pods_EvaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2CFCEE04B1A3BD0EC26B59 /* Pods_EvaTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C2CFCEE04B1A3BD0EC26B59 /* Pods_EvaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EvaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		426591BB220437A700FD397B /* EvaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EvaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		426591BE220437A700FD397B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		426591C0220437A700FD397B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		426591C0220437A700FD397B /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		426591C3220437A700FD397B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		426591C6220437A700FD397B /* EvaTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EvaTest.xcdatamodel; sourceTree = "<group>"; };
 		426591C8220437A800FD397B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		426591CB220437A800FD397B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		426591CD220437A800FD397B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		426591D422043A3500FD397B /* ProductCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionCell.swift; sourceTree = "<group>"; };
+		426591D522043A3500FD397B /* ProductCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionCell.xib; sourceTree = "<group>"; };
+		426591DA22043A9E00FD397B /* PersistentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentManager.swift; sourceTree = "<group>"; };
+		426591DF2204437D00FD397B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		426591E12204481B00FD397B /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		4297A19D22046269007A3D4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4297A19F22046638007A3D4C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		4297A1A222046F03007A3D4C /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		4297A1A622047245007A3D4C /* GetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetData.swift; sourceTree = "<group>"; };
+		4297A1AB22047DC9007A3D4C /* ProductListCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCollection.swift; sourceTree = "<group>"; };
+		4297A1AD2204A54F007A3D4C /* DownloadCachedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCachedImage.swift; sourceTree = "<group>"; };
+		4297A1B3220500A6007A3D4C /* ProductStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductStructure.swift; sourceTree = "<group>"; };
+		B741708F32843FD3BE716B54 /* Pods-EvaTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EvaTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-EvaTest/Pods-EvaTest.release.xcconfig"; sourceTree = "<group>"; };
+		F0F65AFD293BB2346E293DDF /* Pods-EvaTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EvaTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EvaTest/Pods-EvaTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9656B099AEC022B3FA0866FB /* Pods_EvaTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +71,8 @@
 			children = (
 				426591BD220437A700FD397B /* EvaTest */,
 				426591BC220437A700FD397B /* Products */,
+				CFD1D5C472626F3A64AB7BFE /* Pods */,
+				5086043187A954BDA558BEFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +88,123 @@
 			isa = PBXGroup;
 			children = (
 				426591BE220437A700FD397B /* AppDelegate.swift */,
-				426591C0220437A700FD397B /* ViewController.swift */,
+				426591D3220439FF00FD397B /* ViewControllers */,
+				426591D822043A3C00FD397B /* View */,
+				426591DC22043B6A00FD397B /* Model */,
+				4297A1A422046F0D007A3D4C /* Servise */,
+				426591DE2204433A00FD397B /* Resources */,
+				4297A1A122046643007A3D4C /* Common */,
 				426591C2220437A700FD397B /* Main.storyboard */,
+			);
+			path = EvaTest;
+			sourceTree = "<group>";
+		};
+		426591D3220439FF00FD397B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				426591C0220437A700FD397B /* ProductListViewController.swift */,
+				426591E12204481B00FD397B /* ScannerViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		426591D822043A3C00FD397B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4297A1AA22047DB8007A3D4C /* ProductList */,
+				426591D922043A4A00FD397B /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		426591D922043A4A00FD397B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				426591D422043A3500FD397B /* ProductCollectionCell.swift */,
+				426591D522043A3500FD397B /* ProductCollectionCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		426591DC22043B6A00FD397B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4297A1B922050364007A3D4C /* CoreData */,
+				4297A1B3220500A6007A3D4C /* ProductStructure.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		426591DE2204433A00FD397B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				426591DF2204437D00FD397B /* R.generated.swift */,
 				426591C8220437A800FD397B /* Assets.xcassets */,
 				426591CA220437A800FD397B /* LaunchScreen.storyboard */,
 				426591CD220437A800FD397B /* Info.plist */,
+				4297A19D22046269007A3D4C /* GoogleService-Info.plist */,
 				426591C5220437A700FD397B /* EvaTest.xcdatamodeld */,
 			);
-			path = EvaTest;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4297A1A122046643007A3D4C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4297A19F22046638007A3D4C /* Color.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4297A1A422046F0D007A3D4C /* Servise */ = {
+			isa = PBXGroup;
+			children = (
+				4297A1A522046F1D007A3D4C /* Firebase */,
+				4297A1A622047245007A3D4C /* GetData.swift */,
+				4297A1AD2204A54F007A3D4C /* DownloadCachedImage.swift */,
+			);
+			path = Servise;
+			sourceTree = "<group>";
+		};
+		4297A1A522046F1D007A3D4C /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				4297A1A222046F03007A3D4C /* FirebaseHelper.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		4297A1AA22047DB8007A3D4C /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				4297A1AB22047DC9007A3D4C /* ProductListCollection.swift */,
+			);
+			path = ProductList;
+			sourceTree = "<group>";
+		};
+		4297A1B922050364007A3D4C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				426591DA22043A9E00FD397B /* PersistentManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		5086043187A954BDA558BEFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C2CFCEE04B1A3BD0EC26B59 /* Pods_EvaTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFD1D5C472626F3A64AB7BFE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0F65AFD293BB2346E293DDF /* Pods-EvaTest.debug.xcconfig */,
+				B741708F32843FD3BE716B54 /* Pods-EvaTest.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 426591D0220437A800FD397B /* Build configuration list for PBXNativeTarget "EvaTest" */;
 			buildPhases = (
+				ED157B09C0421A51D48AF411 /* [CP] Check Pods Manifest.lock */,
 				426591B7220437A600FD397B /* Sources */,
 				426591B8220437A600FD397B /* Frameworks */,
 				426591B9220437A600FD397B /* Resources */,
+				A4F043F3C1CD4A91D271B0B2 /* [CP] Embed Pods Frameworks */,
+				426591DD2204410400FD397B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -127,20 +270,90 @@
 			files = (
 				426591CC220437A800FD397B /* LaunchScreen.storyboard in Resources */,
 				426591C9220437A800FD397B /* Assets.xcassets in Resources */,
+				4297A19E22046269007A3D4C /* GoogleService-Info.plist in Resources */,
 				426591C4220437A700FD397B /* Main.storyboard in Resources */,
+				426591D722043A3500FD397B /* ProductCollectionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		426591DD2204410400FD397B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/EvaTest/Resources\"\n";
+		};
+		A4F043F3C1CD4A91D271B0B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EvaTest/Pods-EvaTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EvaTest/Pods-EvaTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED157B09C0421A51D48AF411 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EvaTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		426591B7220437A600FD397B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				426591C1220437A700FD397B /* ViewController.swift in Sources */,
+				4297A1AC22047DC9007A3D4C /* ProductListCollection.swift in Sources */,
+				426591C1220437A700FD397B /* ProductListViewController.swift in Sources */,
+				426591E22204481B00FD397B /* ScannerViewController.swift in Sources */,
+				4297A1A722047245007A3D4C /* GetData.swift in Sources */,
 				426591BF220437A700FD397B /* AppDelegate.swift in Sources */,
+				4297A1A322046F03007A3D4C /* FirebaseHelper.swift in Sources */,
 				426591C7220437A700FD397B /* EvaTest.xcdatamodeld in Sources */,
+				426591D622043A3500FD397B /* ProductCollectionCell.swift in Sources */,
+				4297A1A022046638007A3D4C /* Color.swift in Sources */,
+				4297A1AE2204A54F007A3D4C /* DownloadCachedImage.swift in Sources */,
+				426591DB22043A9E00FD397B /* PersistentManager.swift in Sources */,
+				426591E02204437D00FD397B /* R.generated.swift in Sources */,
+				4297A1B4220500A6007A3D4C /* ProductStructure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,17 +497,21 @@
 		};
 		426591D1220437A800FD397B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0F65AFD293BB2346E293DDF /* Pods-EvaTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8AUXBABJ48;
-				INFOPLIST_FILE = EvaTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/EvaTest/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexok.EvaTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,17 +519,21 @@
 		};
 		426591D2220437A800FD397B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B741708F32843FD3BE716B54 /* Pods-EvaTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8AUXBABJ48;
-				INFOPLIST_FILE = EvaTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/EvaTest/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexok.EvaTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
