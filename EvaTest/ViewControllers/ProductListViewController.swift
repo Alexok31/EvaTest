@@ -73,6 +73,7 @@ extension ProductListViewController: CollectionViewCellDelegate {
         seceltCell = indexPath?.row
         scannerVc?.productId = "\((indexPath?.row)!)"
         scrollOn = true
+        productsData.removeAll()
         present(scannerVc!, animated: true, completion: nil)
     }
 }
